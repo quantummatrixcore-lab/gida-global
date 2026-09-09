@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gıda Global - Temel Gıda & Temizlik Ürünleri Toptan Satış</title>
-  <meta name="description" content="Gıda Global; kaliteli un, ayçiçek yağı, şeker, bakliyat ve endüstriyel temizlik malzemelerinde toptan ve perakende güvenli tedarik sunar.">
+  <title>Gıda Global - Temel Gıda & Temizlik Ürünleri Toptan İhracat Portalı</title>
+  <meta name="description" content="Gıda Global; un, ayçiçek yağı, şeker, bakliyat ve endüstriyel temizlik malzemelerinde toptan ve perakende güvenli tedarik sunar.">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#10B981">
@@ -40,6 +40,14 @@
 </head>
 <body>
 
+  <!-- Live Logistics Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-content">
+      🚚 Türkiye 81 İl Aynı Gün Sevkiyat &nbsp;&bull;&nbsp; 🌐 40+ Ülke Küresel İhracat Lojistiği &nbsp;&bull;&nbsp; 🛡️ ISO 22000 Gıda Güvenliği &amp; HACCP Sertifikalı &nbsp;&bull;&nbsp; 📦 B2B Koli, Palet &amp; Konteyner Tedariki &nbsp;&bull;&nbsp; 💬 7/24 WhatsApp Hızlı Teklif: +90 532 062 39 35
+    </div>
+  </div>
+
+  <!-- Header & Navigation -->
   <header class="header">
     <div class="container">
       <div class="nav-wrapper">
@@ -64,6 +72,7 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-grid">
@@ -95,7 +104,7 @@
           <div class="hero-card-header">
             <div class="hero-card-icon">🏬</div>
             <div>
-              <h3 style="font-size: 1.2rem; font-weight: 800;">Gıda Global B2B Tedarik</h3>
+              <h3 style="font-size: 1.25rem; font-weight: 900;">Gıda Global B2B Tedarik</h3>
               <p style="font-size: 0.85rem; color: var(--text-muted);">Toptan Alımlarınız İçin Doğrudan Üretici Avantajı</p>
             </div>
           </div>
@@ -110,6 +119,20 @@
     </div>
   </section>
 
+  <!-- Trust Badges Banner -->
+  <section class="trust-banner">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item"><span class="trust-icon">🛡️</span> ISO 22000 Gıda Güvenliği</div>
+        <div class="trust-item"><span class="trust-icon">🏅</span> HACCP Sertifikalı Üretim</div>
+        <div class="trust-item"><span class="trust-icon">☪️</span> Helal Akreditasyon Onayı</div>
+        <div class="trust-item"><span class="trust-icon">🏛️</span> Tarım Bakanlığı Kayıtlı</div>
+        <div class="trust-item"><span class="trust-icon">📦</span> Palet &amp; Konteyner İhracatı</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
   <section id="catalog" class="catalog-section">
     <div class="container">
       <div class="section-header">
@@ -136,6 +159,7 @@
     </div>
   </section>
 
+  <!-- Why Choose Us -->
   <section id="why-us" class="why-section">
     <div class="container">
       <div class="section-header">
@@ -168,6 +192,7 @@
     </div>
   </section>
 
+  <!-- About Section -->
   <section id="about" style="padding: 5rem 0;">
     <div class="container">
       <div class="hero-grid">
@@ -189,6 +214,7 @@
     </div>
   </section>
 
+  <!-- Contact & Quote Form Section -->
   <section id="contact" class="contact-section">
     <div class="container">
       <div class="section-header">
@@ -268,11 +294,68 @@
     </div>
   </section>
 
+  <!-- Pro Quick View Modal -->
+  <div id="product-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button id="modal-close-btn" class="modal-close">&times;</button>
+      <div style="display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem;">
+        <div id="modal-icon" style="font-size: 4rem; background: rgba(16,185,129,0.1); padding: 1rem; border-radius: var(--radius-md);">🌾</div>
+        <div>
+          <span id="modal-code" style="font-size: 0.8rem; font-weight: 800; color: var(--primary);">KOD: GG-FOOD-001</span>
+          <h2 id="modal-title" style="font-size: 1.6rem; font-weight: 900; margin: 0.25rem 0 0.5rem;">Ürün Adı</h2>
+          <p id="modal-desc" style="color: var(--text-muted); font-size: 0.95rem;">Ürün açıklaması burada görünecek.</p>
+        </div>
+      </div>
+
+      <div style="background: var(--light-bg); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
+        <h4 style="font-weight: 800; font-size: 0.95rem; margin-bottom: 0.75rem;">📦 Ambalaj &amp; Teknik Özellikler</h4>
+        <p style="font-size: 0.9rem;"><strong>Standart Ambalaj:</strong> <span id="modal-pkg">-</span></p>
+        <p style="font-size: 0.9rem;"><strong>Menşei:</strong> <span id="modal-origin">-</span> &nbsp;|&nbsp; <strong>Raf Ömrü:</strong> <span id="modal-shelf">-</span></p>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;"><strong>Spesifikasyon:</strong> <span id="modal-specs">-</span></p>
+      </div>
+
+      <h4 style="font-weight: 800; font-size: 0.95rem;">📊 Sipariş Birimi Seçiniz (B2B):</h4>
+      <div class="unit-selector">
+        <div class="unit-opt" onclick="selectUnitOpt(this, 'Perakende Paket')">🛍️ Paket</div>
+        <div class="unit-opt active" onclick="selectUnitOpt(this, 'Koli (24'lü)')">📦 Koli (24'lü)</div>
+        <div class="unit-opt" onclick="selectUnitOpt(this, 'Palet (50 Koli)')">🏗️ Palet (50 Koli)</div>
+        <div class="unit-opt" onclick="selectUnitOpt(this, 'Konteyner / Tır')">🚚 Tır / Konteyner</div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+        <a id="modal-wa-btn" href="#" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+          💬 WhatsApp ile Özel Fiyat Teklifi Al
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Sticky Bottom Navigation Bar -->
+  <div class="mobile-bottom-bar">
+    <a href="#home" class="mobile-bar-item active">
+      <span class="mobile-bar-icon">🏠</span>
+      <span>Ana Sayfa</span>
+    </a>
+    <a href="#catalog" class="mobile-bar-item">
+      <span class="mobile-bar-icon">📦</span>
+      <span>Katalog</span>
+    </a>
+    <a href="https://wa.me/905320623935" target="_blank" class="mobile-bar-item" style="color: var(--whatsapp);">
+      <span class="mobile-bar-icon">💬</span>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#contact" class="mobile-bar-item">
+      <span class="mobile-bar-icon">📍</span>
+      <span>İletişim</span>
+    </a>
+  </div>
+
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/images/logo.svg" alt="Gıda Global Logo" style="height: 40px;">
+          <img src="assets/images/logo.svg" alt="Gıda Global Logo" style="height: 44px;">
           <p data-i18n="hero_sub">Gıda Global; temel gıda ve temizlik ürünlerinde güvenilir tedarik adresiniz.</p>
           <p style="font-size: 0.8rem; margin-top: 0.75rem; color: #64748B;" data-i18n="contact_address">
             📍 Koca Mustafapaşa Mah. İmrahor İlyasbey Cad. Ballıca Apt. No: 25A Fatih / İstanbul

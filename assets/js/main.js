@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   let currentLang = localStorage.getItem('gida_global_lang') || 'tr';
   let currentCategory = 'all';
+  let selectedUnit = 'Koli (24\'lü)';
 
   const productsGrid = document.getElementById('products-grid');
   const searchInput = document.getElementById('search-input');
@@ -9,6 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const contactForm = document.getElementById('quote-form');
 
+  // Modal Elements
+  const modalOverlay = document.getElementById('product-modal');
+  const modalCloseBtn = document.getElementById('modal-close-btn');
+
+  // Theme Management
   const savedTheme = localStorage.getItem('gida_global_theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
@@ -25,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
   }
 
+  // i18n Language Management
   function applyLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('gida_global_lang', lang);
@@ -33,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dict = window.I18N[lang];
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
-      if (dict[key]) {
+      if (dict && dict[key]) {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = dict[key];
         } else {
@@ -50,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(nextLang);
   });
 
+  // Render Products Bento Grid
   function renderProducts() {
     if (!productsGrid) return;
     const query = (searchInput.value || '').toLowerCase().trim();
@@ -72,9 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (filtered.length === 0) {
-      productsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">
-        <p style="font-size: 1.5rem; margin-bottom: 0.5rem;">🔍</p>
-        <p>${currentLang === 'tr' ? 'Aramanıza uygun ürün bulunamadı.' : 'No products found matching your search.'}</p>
+      productsGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 4rem 2rem; color: var(--text-muted);">
+        <p style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</p>
+        <p style="font-size: 1.1rem; font-weight: 700;">${currentLang === 'tr' ? 'Aramanıza uygun ürün bulunamadı.' : 'No products found matching your search.'}</p>
       </div>`;
       return;
     }
@@ -109,8 +117,11 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           <div>
             <div class="product-package">📦 ${pkg}</div>
-            <div class="product-actions">
-              <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+            <div class="product-actions" style="display: flex; gap: 0.5rem;">
+              <button onclick="openProductModal(${item.id})" class="btn btn-outline" style="flex: 1; padding: 0.6rem; font-size: 0.85rem;">
+                🔍 ${dict.btn_quick_view || 'İncele'}
+              </button>
+              <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="flex: 1.2; padding: 0.6rem; font-size: 0.85rem;">
                 💬 ${dict.btn_whatsapp_quote}
               </a>
             </div>
@@ -120,6 +131,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }).join('');
   }
 
+  // Open Quick View Modal
+  window.openProductModal = function(id) {
+    const item = window.PRODUCTS.find(p => p.id === id);
+    if (!item || !modalOverlay) return;
+
+    const name = currentLang === 'tr' ? item.name_tr : item.name_en;
+    const desc = currentLang === 'tr' ? item.desc_tr : item.desc_en;
+    const pkg = currentLang === 'tr' ? item.package_tr : item.package_en;
+    const origin = currentLang === 'tr' ? item.origin_tr : item.origin_en;
+    const shelf = currentLang === 'tr' ? item.shelf_life_tr : item.shelf_life_en;
+    const specs = currentLang === 'tr' ? item.specs_tr : item.specs_en;
+
+    document.getElementById('modal-icon').textContent = item.icon;
+    document.getElementById('modal-title').textContent = name;
+    document.getElementById('modal-code').textContent = `KOD: ${item.code}`;
+    document.getElementById('modal-desc').textContent = desc;
+    document.getElementById('modal-pkg').textContent = pkg;
+    document.getElementById('modal-origin').textContent = origin;
+    document.getElementById('modal-shelf').textContent = shelf;
+    document.getElementById('modal-specs').textContent = specs;
+
+    updateModalWaButton(item.code, name, selectedUnit);
+
+    modalOverlay.classList.add('active');
+  };
+
+  window.selectUnitOpt = function(btn, unitName) {
+    document.querySelectorAll('.unit-opt').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedUnit = unitName;
+    
+    const name = document.getElementById('modal-title').textContent;
+    const code = document.getElementById('modal-code').textContent.replace('KOD: ', '');
+    updateModalWaButton(code, name, selectedUnit);
+  };
+
+  function updateModalWaButton(code, name, unit) {
+    const waBtn = document.getElementById('modal-wa-btn');
+    if (!waBtn) return;
+    const text = encodeURIComponent(`Merhaba Gıda Global, ${code} - ${name} ürünü için [ ${unit} ] biriminde B2B fiyat teklifi almak istiyorum.`);
+    waBtn.href = `https://wa.me/905320623935?text=${text}`;
+  }
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', () => {
+      modalOverlay.classList.remove('active');
+    });
+  }
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) modalOverlay.classList.remove('active');
+    });
+  }
+
+  // Filter Buttons Event Listener
   pillBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       pillBtns.forEach(b => b.classList.remove('active'));
@@ -133,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', renderProducts);
   }
 
+  // Form Submit
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
