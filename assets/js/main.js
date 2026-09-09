@@ -101,17 +101,21 @@ document.addEventListener('DOMContentLoaded', () => {
         item.type === 'perakende' ? `<span class="badge badge-perakende">${dict.badge_perakende}</span>` :
         `<span class="badge badge-toptan">${dict.badge_toptan}</span> <span class="badge badge-perakende">${dict.badge_perakende}</span>`;
 
+      const moq = currentLang === 'tr' ? item.moq_tr : item.moq_en;
       const waMsg = encodeURIComponent(`Merhaba Gıda Global, ${item.code} - ${name} ürünü hakkında fiyat teklifi ve detaylı bilgi almak istiyorum.`);
       const waUrl = `https://wa.me/905320623935?text=${waMsg}`;
 
       return `
         <div class="product-card">
           <div>
+            <div class="product-img-wrapper">
+              <img src="${item.image}" alt="${name}" class="product-img" loading="lazy" onerror="this.onerror=null; this.src='assets/images/logo.svg';">
+              <div class="moq-tag">⚖️ ${moq}</div>
+            </div>
             <div class="product-badges">
               ${categoryBadge}
               ${typeBadge}
             </div>
-            <div class="product-icon">${item.icon}</div>
             <h3 class="product-title">${name}</h3>
             <p class="product-desc">${desc}</p>
           </div>
@@ -142,8 +146,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const origin = currentLang === 'tr' ? item.origin_tr : item.origin_en;
     const shelf = currentLang === 'tr' ? item.shelf_life_tr : item.shelf_life_en;
     const specs = currentLang === 'tr' ? item.specs_tr : item.specs_en;
+    const moq = currentLang === 'tr' ? item.moq_tr : item.moq_en;
 
-    document.getElementById('modal-icon').textContent = item.icon;
+    const modalImg = document.getElementById('modal-img');
+    if (modalImg) {
+      modalImg.src = item.image;
+      modalImg.alt = name;
+    }
+
+    const modalMoq = document.getElementById('modal-moq');
+    if (modalMoq) modalMoq.textContent = `⚖️ ${moq}`;
+
     document.getElementById('modal-title').textContent = name;
     document.getElementById('modal-code').textContent = `KOD: ${item.code}`;
     document.getElementById('modal-desc').textContent = desc;

@@ -298,28 +298,33 @@
   <div id="product-modal" class="modal-overlay">
     <div class="modal-content">
       <button id="modal-close-btn" class="modal-close">&times;</button>
-      <div style="display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 1.5rem;">
-        <div id="modal-icon" style="font-size: 4rem; background: rgba(16,185,129,0.1); padding: 1rem; border-radius: var(--radius-md);">🌾</div>
-        <div>
+      <div class="modal-header-flex">
+        <div class="modal-img-container">
+          <img id="modal-img" src="assets/images/products/product_1.jpg" alt="Ürün Detayı" class="modal-img">
+        </div>
+        <div style="flex: 1;">
           <span id="modal-code" style="font-size: 0.8rem; font-weight: 800; color: var(--primary);">KOD: GG-FOOD-001</span>
-          <h2 id="modal-title" style="font-size: 1.6rem; font-weight: 900; margin: 0.25rem 0 0.5rem;">Ürün Adı</h2>
-          <p id="modal-desc" style="color: var(--text-muted); font-size: 0.95rem;">Ürün açıklaması burada görünecek.</p>
+          <h2 id="modal-title" style="font-size: 1.5rem; font-weight: 900; margin: 0.25rem 0 0.5rem; line-height: 1.25;">Ürün Adı</h2>
+          <p id="modal-desc" style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.5;">Ürün açıklaması burada görünecek.</p>
+          <div style="margin-top: 0.6rem;">
+            <span id="modal-moq" class="badge badge-toptan" style="font-size: 0.78rem;">Minimum Sipariş</span>
+          </div>
         </div>
       </div>
 
       <div style="background: var(--light-bg); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
         <h4 style="font-weight: 800; font-size: 0.95rem; margin-bottom: 0.75rem;">📦 Ambalaj &amp; Teknik Özellikler</h4>
-        <p style="font-size: 0.9rem;"><strong>Standart Ambalaj:</strong> <span id="modal-pkg">-</span></p>
-        <p style="font-size: 0.9rem;"><strong>Menşei:</strong> <span id="modal-origin">-</span> &nbsp;|&nbsp; <strong>Raf Ömrü:</strong> <span id="modal-shelf">-</span></p>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;"><strong>Spesifikasyon:</strong> <span id="modal-specs">-</span></p>
+        <p style="font-size: 0.9rem; margin-bottom: 0.35rem;"><strong>Standart Ambalaj:</strong> <span id="modal-pkg">-</span></p>
+        <p style="font-size: 0.9rem; margin-bottom: 0.35rem;"><strong>Menşei:</strong> <span id="modal-origin">-</span> &nbsp;|&nbsp; <strong>Raf Ömrü:</strong> <span id="modal-shelf">-</span></p>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.5rem;"><strong>Teknik Spesifikasyon:</strong> <span id="modal-specs">-</span></p>
       </div>
 
-      <h4 style="font-weight: 800; font-size: 0.95rem;">📊 Sipariş Birimi Seçiniz (B2B):</h4>
+      <h4 style="font-weight: 800; font-size: 0.95rem; margin-bottom: 0.5rem;">📊 Sipariş Birimi Seçiniz (B2B):</h4>
       <div class="unit-selector">
-        <div class="unit-opt" onclick="selectUnitOpt(this, 'Perakende Paket')">🛍️ Paket</div>
-        <div class="unit-opt active" onclick="selectUnitOpt(this, 'Koli (24'lü)')">📦 Koli (24'lü)</div>
-        <div class="unit-opt" onclick="selectUnitOpt(this, 'Palet (50 Koli)')">🏗️ Palet (50 Koli)</div>
-        <div class="unit-opt" onclick="selectUnitOpt(this, 'Konteyner / Tır')">🚚 Tır / Konteyner</div>
+        <div class="unit-opt" onclick="selectUnitOpt(this, 'Paket')">🛍️ Paket</div>
+        <div class="unit-opt active" onclick="selectUnitOpt(this, 'Koli')">📦 Koli (24'lü)</div>
+        <div class="unit-opt" onclick="selectUnitOpt(this, 'Palet')">🏗️ Palet (50 Koli)</div>
+        <div class="unit-opt" onclick="selectUnitOpt(this, 'Konteyner')">🚚 Tır / Konteyner</div>
       </div>
 
       <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
