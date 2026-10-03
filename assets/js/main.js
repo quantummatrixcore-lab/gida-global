@@ -315,3 +315,11 @@ document.addEventListener('DOMContentLoaded', () => {
         ticker.innerHTML = `💵 USD/TRY: ${tryRate} &nbsp;&bull;&nbsp; 💶 EUR/TRY: ${eurRate} &nbsp;&bull;&nbsp; ` + ticker.innerHTML;
       }
     }).catch(e => console.log('Currency API failed', e));
+
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const navMenu = document.querySelector('.nav-links');
+  if(mobileBtn && navMenu) {
+    mobileBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('mobile-active');
+    });
+  }

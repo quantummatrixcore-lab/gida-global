@@ -942,3 +942,20 @@ textarea.form-control {
   .mobile-bar-item.active { color: var(--primary); }
   .mobile-bar-icon { font-size: 1.25rem; }
 }
+
+@media (max-width: 768px) {
+  #mobile-menu-btn { display: block !important; margin-right: 1rem; }
+  .nav-links {
+    display: none !important;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: var(--shadow-md);
+  }
+  .nav-links.mobile-active { display: flex !important; }
+}
