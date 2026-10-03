@@ -303,3 +303,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initialize cart
   updateCartUI();
+
+  // Live Currency Ticker
+  fetch('https://open.er-api.com/v6/latest/USD')
+    .then(res => res.json())
+    .then(data => {
+      const tryRate = data.rates.TRY.toFixed(2);
+      const eurRate = (data.rates.TRY / data.rates.EUR).toFixed(2);
+      const ticker = document.querySelector('.ticker-content');
+      if(ticker) {
+        ticker.innerHTML = `💵 USD/TRY: ${tryRate} &nbsp;&bull;&nbsp; 💶 EUR/TRY: ${eurRate} &nbsp;&bull;&nbsp; ` + ticker.innerHTML;
+      }
+    }).catch(e => console.log('Currency API failed', e));
