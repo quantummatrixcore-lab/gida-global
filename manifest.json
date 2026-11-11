@@ -1,0 +1,29 @@
+{
+  "name": "Gıda Global | B2B Gıda ve Temizlik İhracat Tedarik",
+  "short_name": "Gıda Global",
+  "description": "Gıda Global B2B Temel Gıda ve Temizlik Ürünleri Toptan İhracat ve Tedarik Portalı",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a4275",
+  "theme_color": "#0a4275",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
