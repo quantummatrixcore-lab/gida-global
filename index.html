@@ -2,39 +2,502 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="tagline">Gıda Global | Temel Gıda & Temizlik B2B İhracat</title>
-  <meta name="description" content="Gıda Global; un, ayçiçek yağı, şeker, bakliyat ve endüstriyel temizlik malzemelerinde toptan güvenli tedarik sunar.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.png">
-  <meta name="theme-color" content="#0284c7">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title data-i18n="tagline">Gıda Global | Temel Gıda & Temizlik B2B İhracat & Toptan Tedarik</title>
+  <meta name="description" content="Gıda Global; un, ayçiçek yağı, şeker, bakliyat ve endüstriyel temizlik ürünlerinde 81 il ve 40+ ülkeye güvenilir B2B toptan tedarik, konteyner ve tır bazlı lojistik çözümleri sunar.">
+  <meta name="keywords" content="toptan gıda, b2b gıda ihracatı, toptan un, toptan ayçiçek yağı, toptan şeker, bakliyat ihracatı, endüstriyel temizlik toptan, gıda global">
+  <meta name="author" content="Gıda Global B2B Tedarik Ağı">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://gidaglobal.com/">
   
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gidaglobal.com/">
+  <meta property="og:site_name" content="Gıda Global - B2B Gıda & Temizlik Tedarik Ağı">
+  <meta property="og:title" content="Gıda Global | Toptan Temel Gıda & FMCG İhracat Portalı">
+  <meta property="og:description" content="Türkiye'nin lider gıda ve temizlik markalarını toptan fiyatlarla, ISO 22000 ve HACCP güvencesiyle 81 ile ve küresel limanlara ulaştırıyoruz.">
+  <meta property="og:image" content="assets/images/logo.png">
+  <meta property="og:locale" content="tr_TR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://gidaglobal.com/">
+  <meta name="twitter:title" content="Gıda Global | Toptan Temel Gıda & Temizlik İhracat">
+  <meta name="twitter:description" content="Un, yağ, şeker, bakliyat ve temizlik ürünlerinde toptan B2B tedarik ve küresel ihracat ağı.">
+  <meta name="twitter:image" content="assets/images/logo.png">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="theme-color" content="#0a4275">
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="assets/css/style.css?v=5.6">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WholesaleStore",
-    "name": "Gıda Global",
-    "legalName": "GLOBAL EXPORT LOGİSTİC DEMİR ÇELİK İNŞAAT GIDA TEKSTİL OTOMOTİV DAN. HAYVAN İTH. İHR. TİC. VE LTD. ŞTİ.",
-    "telephone": "+905320623935",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Koca Mustafapaşa Mah. İmrahor İlyasbey Cad. Ballıca Apt. No: 25A",
-      "addressLocality": "Fatih",
-      "addressRegion": "İstanbul",
-      "addressCountry": "TR"
-    }
-  }
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css?v=6.0">
+
+  <!-- Inline FOUT Prevention Script -->
+  <script>
+    (function () {
+      try {
+        var savedTheme = localStorage.getItem('site_theme') || localStorage.getItem('theme');
+        var theme = savedTheme ? savedTheme : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
   </script>
+
+  <!-- DOM ID Compatibility Bridge between Legacy and Updated JS -->
+  <script>
+    (function () {
+      var aliasMap = {
+        'quote-form': 'b2b-form',
+        'form-name': 'comp-name',
+        'form-phone': 'comp-phone',
+        'form-category': 'comp-category',
+        'form-message': 'comp-message',
+        'modal-close-btn': 'modal-close',
+        'modal-pkg': 'modal-packaging',
+        'modal-wa-btn': 'modal-add-cart-btn',
+        'cart-sidebar': 'cart-modal',
+        'cart-close-btn': 'cart-close',
+        'cart-checkout-btn': 'send-cart-whatsapp',
+        'floating-cart-count': 'cart-count'
+      };
+      var origGet = document.getElementById.bind(document);
+      document.getElementById = function (id) {
+        var el = origGet(id);
+        if (el) return el;
+        if (aliasMap[id]) return origGet(aliasMap[id]);
+        return null;
+      };
+    })();
+  </script>
+
+  <!-- JSON-LD Structured Data: Organization & WebSite -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WholesaleStore",
+      "name": "Gıda Global",
+      "legalName": "GLOBAL EXPORT LOGİSTİC DEMİR ÇELİK İNŞAAT GIDA TEKSTİL OTOMOTİV DAN. HAYVAN İTH. İHR. TİC. VE LTD. ŞTİ.",
+      "url": "https://gidaglobal.com",
+      "logo": "https://gidaglobal.com/assets/images/logo.png",
+      "image": "https://gidaglobal.com/assets/images/logo.png",
+      "description": "Gıda Global; temel gıda, bakliyat, un, ayçiçek yağı, şeker ve endüstriyel temizlik alanında 81 il ve 40+ ülkeye toptan ihracat ve lojistik tedarik hizmeti sunar.",
+      "telephone": "+905320623935",
+      "priceRange": "$$",
+      "currenciesAccepted": "TRY, USD, EUR",
+      "paymentAccepted": "Bank Transfer, L/C, Cash",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Koca Mustafapaşa Mah. İmrahor İlyasbey Cad. Ballıca Apt. No: 25A",
+        "addressLocality": "Fatih",
+        "addressRegion": "İstanbul",
+        "postalCode": "34098",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.0012,
+        "longitude": 28.9324
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://wa.me/905320623935"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Gıda Global B2B Tedarik",
+      "url": "https://gidaglobal.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://gidaglobal.com/#catalog?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+  </script>
+
+  <!-- Embedded Ultra-Premium Enhancements (Zero-Conflict Cross-Agent Styling) -->
+  <style id="ultra-premium-enhancements">
+    /* Brand Marquee Section */
+    .brand-marquee-section {
+      padding: 2rem 0;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-wrapper {
+      width: 100%;
+    }
+    .marquee-header {
+      text-align: center;
+      margin-bottom: 1.25rem;
+    }
+    .marquee-subtitle {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .marquee-container {
+      display: flex;
+      overflow: hidden;
+      user-select: none;
+      mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+    .marquee-track {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 1.25rem;
+      animation: marqueeScroll 36s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-container:hover .marquee-track {
+      animation-play-state: paused;
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 1.4rem;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: 2rem;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0.5px;
+      transition: all 0.25s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .brand-pill:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .brand-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--secondary);
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 6px rgba(5, 150, 105, 0.4);
+    }
+
+    /* Quality Certificates Strip */
+    .certificates-strip {
+      padding: 2.75rem 0;
+      background: var(--bg-main);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .cert-badge {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.4rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .cert-badge:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+    .cert-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+    }
+    .cert-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    .cert-text {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+
+    /* 4-Step B2B Process Section */
+    .process-section {
+      padding: 6rem 0;
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+    }
+    .section-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      background: var(--primary-light);
+      padding: 0.35rem 1rem;
+      border-radius: 2rem;
+      border: 1px solid rgba(10, 66, 117, 0.1);
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .process-card {
+      position: relative;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-sm);
+    }
+    .process-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+      background: var(--bg-card);
+    }
+    .process-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+    .process-step-num {
+      font-size: 2.25rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .process-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .process-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    .process-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+    .process-desc {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Mobile Menu Overlay */
+    .mobile-menu-overlay {
+      display: none;
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      width: 100%;
+      height: calc(100vh - var(--header-height));
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 95;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-menu-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+    .mobile-menu-btn {
+      display: none;
+    }
+
+    /* Hero Card Enhancements */
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .hero-card-icon {
+      font-size: 2.25rem;
+      background: var(--primary-light);
+      width: 58px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      flex-shrink: 0;
+    }
+    .hero-card-title {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+    .hero-card-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .hero-card-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin-bottom: 1.25rem;
+    }
+    .hero-card-features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.75rem;
+      padding: 1rem 1.25rem;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+    }
+    .hero-card-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .hero-check-icon {
+      color: var(--secondary);
+      font-weight: 900;
+    }
+    .hero-card-btn {
+      width: 100%;
+      font-size: 1rem;
+      justify-content: center;
+    }
+
+    /* Modal Action Buttons Group */
+    .modal-actions-grid {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .modal-category-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--secondary);
+      margin-bottom: 0.25rem;
+    }
+
+    /* Responsive Breakdown */
+    @media (max-width: 1100px) {
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: flex !important;
+      }
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+      .modal-actions-grid {
+        flex-direction: column;
+      }
+      .header-wa-btn {
+        display: none;
+      }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: var(--bg-card);
+        border-bottom: 2px solid var(--primary);
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-lg);
+        z-index: 100;
+        gap: 1rem;
+      }
+      .nav-links.mobile-active {
+        display: flex !important;
+      }
+      .nav-link {
+        font-size: 1.05rem;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .nav-link::after {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Live Logistics Ticker -->
+  <!-- Live Logistics & Currency Ticker -->
   <div class="ticker-bar">
     <div class="ticker-content">
       🚚 Türkiye 81 İl Aynı Gün Sevkiyat &nbsp;&bull;&nbsp; 🌐 40+ Ülke Küresel İhracat Lojistiği &nbsp;&bull;&nbsp; 🛡️ ISO 22000 Gıda Güvenliği &amp; HACCP Sertifikalı &nbsp;&bull;&nbsp; 📦 B2B Koli, Palet &amp; Konteyner Tedariki &nbsp;&bull;&nbsp; 💬 7/24 WhatsApp B2B Destek: +90 532 062 39 35
@@ -45,44 +508,57 @@
   <header class="header">
     <div class="container">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">
+        <a href="#home" class="brand-logo" aria-label="Gıda Global Ana Sayfa">
           <img src="assets/images/logo.png" alt="Gıda Global Logo">
         </a>
-        <ul class="nav-links">
+        
+        <ul class="nav-links" id="nav-links">
           <li><a href="#home" class="nav-link active" data-i18n="nav_home">Ana Sayfa</a></li>
           <li><a href="#about" class="nav-link" data-i18n="nav_about">Hakkımızda</a></li>
+          <li><a href="#process" class="nav-link" data-i18n="nav_process">Tedarik Süreci</a></li>
           <li><a href="#catalog" class="nav-link" data-i18n="nav_catalog">Ürün Kataloğu</a></li>
           <li><a href="#why-us" class="nav-link" data-i18n="nav_b2b">Toptan Satış</a></li>
           <li><a href="#contact" class="nav-link" data-i18n="nav_contact">İletişim</a></li>
         </ul>
+
         <div class="nav-actions">
-          <button id="theme-toggle" class="icon-btn" title="Tema Değiştir">🌙</button>
-          <button id="lang-toggle" class="pill-btn">EN 🇬🇧</button>
-          <a href="https://wa.me/905320623935" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: text-bottom; margin-right: 4px;">
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-</svg> WhatsApp
+          <button id="theme-toggle" class="icon-btn" title="Tema Değiştir" aria-label="Karanlık/Aydınlık Tema Değiştir">🌙</button>
+          <button id="lang-toggle" class="pill-btn" aria-label="Dili Değiştir">EN 🇬🇧</button>
+          <a href="https://wa.me/905320623935?text=Merhaba,%20G%C4%B1da%20Global%20toptan%20fiyat%20listesi%20ve%20teklif%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp header-wa-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>WhatsApp</span>
           </a>
+          <button id="mobile-menu-btn" class="mobile-menu-btn icon-btn" aria-label="Menüyü Aç/Kapat" aria-expanded="false" title="Menü">
+            <svg class="hamburger-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
         </div>
       </div>
     </div>
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Sinematik B2B Hero Section -->
   <section id="home" class="hero">
     <div class="container">
       <div class="hero-grid">
-        <div>
-          <div class="hero-badge" data-i18n="hero_badge">🌐 Uluslararası Standartlarda B2B İhracat & Tedarik</div>
+        <div class="hero-content">
+          <div class="hero-badge" data-i18n="hero_badge">🌐 Uluslararası Standartlarda B2B İhracat &amp; Tedarik</div>
           <h1 class="hero-title" data-i18n="hero_title">Türkiye'nin Küresel <span>Gıda ve Temizlik</span> Tedarik Ağı</h1>
-          <p class="hero-sub" data-i18n="hero_sub">Gıda Global; Torku, Söke, Yayla, Omo, Fairy gibi yerli ve global devlerin orijinal ürünlerini, konteyner ve tır bazlı en uygun toptan fiyatlarla uluslararası pazara taşır.</p>
+          <p class="hero-sub" data-i18n="hero_sub">Gıda Global; Torku, Söke, Yayla, Biryağ, Balküpü, Omo ve Fairy gibi sektör devlerinin %100 orijinal ürünlerini; palet, tır ve konteyner bazında en uygun toptan fiyatlarla uluslararası pazara taşır.</p>
           <div class="hero-cta">
-            <a href="https://wa.me/905320623935" target="_blank" class="btn btn-primary" data-i18n="hero_cta_whatsapp">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: text-bottom; margin-right: 4px;">
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-</svg> Toptan Teklif İste
+            <a href="https://wa.me/905320623935?text=Merhaba,%20toptan%20%C3%BCr%C3%BCn%20fiyat%20listesi%20ve%20teklif%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="hero_cta_whatsapp">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              <span>Hızlı Toptan Teklif Al</span>
             </a>
-            <a href="#catalog" class="btn btn-outline" data-i18n="hero_cta_catalog">Kataloğa Göz At</a>
+            <a href="#catalog" class="btn btn-outline" data-i18n="hero_cta_catalog">Kataloğu İncele</a>
           </div>
           <div class="hero-stats">
             <div class="stat-item">
@@ -90,50 +566,224 @@
               <span class="stat-label" data-i18n="stat_clients">Ülkeye İhracat</span>
             </div>
             <div class="stat-item">
-              <span class="stat-num">%100</span>
-              <span class="stat-label" data-i18n="stat_products">Orijinal Ürün</span>
+              <span class="stat-num">81 İl</span>
+              <span class="stat-label" data-i18n="stat_delivery">Kesintisiz Sevkiyat</span>
             </div>
             <div class="stat-item">
-              <span class="stat-label" style="margin-top:0.7rem;" data-i18n="stat_delivery">Lojistik & Gümrük<br>Operasyon Desteği</span>
+              <span class="stat-num">500+</span>
+              <span class="stat-label">Kurumsal Partner</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">%100</span>
+              <span class="stat-label" data-i18n="stat_products">Orijinal Ürün</span>
             </div>
           </div>
         </div>
 
         <div class="hero-card">
-          <div style="display:flex; align-items:center; gap: 1rem; margin-bottom: 1.5rem;">
-            <div style="font-size: 2.5rem; background: var(--primary-light); width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 1rem;">🚢</div>
+          <div class="hero-card-header">
+            <div class="hero-card-icon">🚢</div>
             <div>
-              <h3 style="font-size: 1.25rem; font-weight: 900; color: var(--navy, #0f172a);">Endüstriyel Alım Portalı</h3>
-              <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Otel, Hastane, Market Zincirleri İçin</p>
+              <h3 class="hero-card-title">Endüstriyel Alım Portalı</h3>
+              <p class="hero-card-subtitle">Otel, Catering, Market Zincirleri ve İhracatçılar İçin</p>
             </div>
           </div>
-          <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--text-muted); line-height: 1.5;">
-            Yüksek hacimli konteyner veya palet alımlarınızda (FCL/LTL), resmi distribütör garantisiyle en rekabetçi fiyat teklifini dakikalar içinde alın.
+          <p class="hero-card-desc">
+            Yüksek tonajlı palet ve konteyner alımlarınızda (FCL/FTL), doğrudan üretici distribütör garantisiyle en rekabetçi proforma teklifinizi 2 saat içinde alın.
           </p>
-          <a href="#contact" class="btn btn-whatsapp" style="width: 100%; font-size: 1rem;" data-i18n="btn_quick_view">
-            WhatsApp B2B Satış Hattı
+          <div class="hero-card-features">
+            <div class="hero-card-feature-item">
+              <span class="hero-check-icon">✓</span>
+              <span>Özel Toptan İskonto &amp; Fiyat Sabitleme</span>
+            </div>
+            <div class="hero-card-feature-item">
+              <span class="hero-check-icon">✓</span>
+              <span>Gümrük, Dolaşım Belgeleri ve İhracat Operasyon Desteği</span>
+            </div>
+            <div class="hero-card-feature-item">
+              <span class="hero-check-icon">✓</span>
+              <span>Palet / Konteyner Bazlı Shrinkli Güvenli Yükleme</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-whatsapp hero-card-btn" data-i18n="btn_quick_view">
+            WhatsApp B2B Satış Departmanı
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust Banner -->
-  <section class="trust-banner">
-    <div class="container">
-      <div class="trust-grid">
-        <div class="trust-item"><span class="trust-icon">🛡️</span> ISO 22000 Gıda Güvenliği</div>
-        <div class="trust-item"><span class="trust-icon">🏅</span> HACCP Sertifikalı Üretim</div>
-        <div class="trust-item"><span class="trust-icon">☪️</span> Helal Akreditasyon Onayı</div>
-        <div class="trust-item"><span class="trust-icon">🏛️</span> Tarım Bakanlığı Kayıtlı</div>
-        <div class="trust-item"><span class="trust-icon">📦</span> Palet &amp; Konteyner İhracatı</div>
+  <!-- Kayan Partner Marka Vitrini (Brand Marquee) -->
+  <section class="brand-marquee-section" aria-label="Anlaşmalı ve Tedarik Edilen Markalar">
+    <div class="marquee-wrapper">
+      <div class="marquee-header">
+        <span class="marquee-subtitle">DOĞRUDAN FABRİKA VE DİSTRİBÜTÖR TEDARİK AĞIMIZ</span>
+      </div>
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <!-- First Loop -->
+          <div class="brand-pill"><span class="brand-dot"></span>BALKÜPÜ</div>
+          <div class="brand-pill"><span class="brand-dot"></span>BİRYAĞ</div>
+          <div class="brand-pill"><span class="brand-dot"></span>ÇAYKUR</div>
+          <div class="brand-pill"><span class="brand-dot"></span>SİNANGİL</div>
+          <div class="brand-pill"><span class="brand-dot"></span>TAT</div>
+          <div class="brand-pill"><span class="brand-dot"></span>MUTLUKALE</div>
+          <div class="brand-pill"><span class="brand-dot"></span>KOMİLİ</div>
+          <div class="brand-pill"><span class="brand-dot"></span>BİLLUR TUZ</div>
+          <div class="brand-pill"><span class="brand-dot"></span>OBA MAKARNA</div>
+          <div class="brand-pill"><span class="brand-dot"></span>FİLİZ</div>
+          <div class="brand-pill"><span class="brand-dot"></span>YAYLA</div>
+          <div class="brand-pill"><span class="brand-dot"></span>DOĞUŞ ÇAY</div>
+          <div class="brand-pill"><span class="brand-dot"></span>OMO PROFESSIONAL</div>
+          <!-- Second Loop (Infinite Seamless) -->
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>BALKÜPÜ</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>BİRYAĞ</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>ÇAYKUR</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>SİNANGİL</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>TAT</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>MUTLUKALE</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>KOMİLİ</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>BİLLUR TUZ</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>OBA MAKARNA</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>FİLİZ</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>YAYLA</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>DOĞUŞ ÇAY</div>
+          <div class="brand-pill" aria-hidden="true"><span class="brand-dot"></span>OMO PROFESSIONAL</div>
+        </div>
       </div>
     </div>
   </section>
 
-  
-  <!-- About Us Section -->
-  <section id="about" class="why-section" style="background: var(--bg-main);">
+  <!-- Kalite ve Güvence Sertifikaları Şeridi -->
+  <section class="certificates-strip" aria-label="Kalite ve Güvence Standartları">
+    <div class="container">
+      <div class="cert-grid">
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+          <div class="cert-text">ISO 22000 &amp; HACCP<br>Gıda Güvenliği Standardı</div>
+        </div>
+
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="cert-text">%100 Orijinal Fabrika Çıkışlı<br>Toptan Ambalaj</div>
+        </div>
+
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle>
+              <circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div class="cert-text">Soğuk Zincir &amp; Özmal<br>Lojistik Dağıtım Filosu</div>
+        </div>
+
+        <div class="cert-badge">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+          </div>
+          <div class="cert-text">Helal Gıda &amp; TSE<br>Standartlarına Uygunluk</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 Adımlı Kurumsal B2B Tedarik Süreci -->
+  <section id="process" class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GÜVENLİ TİCARET VE LOJİSTİK AKIŞI</span>
+        <h2 class="section-title">4 Adımda Kurumsal Tedarik Süreci</h2>
+        <p class="section-sub">Ürün seçiminden proforma faturaya, kalite kontrolden küresel liman teslimine kadar şeffaf ve profesyonel B2B süreç yönetimi.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-card-top">
+            <span class="process-step-num">01</span>
+            <div class="process-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-title">Ürün &amp; Tonaj Seçimi</h3>
+          <p class="process-desc">Katalogdan veya ihtiyaç listenizden palet, tır ya da konteyner ölçeğinde ürünlerinizi belirleyin ve teklif sepetine ekleyin.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card-top">
+            <span class="process-step-num">02</span>
+            <div class="process-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-title">Kurumsal Fiyatlandırma &amp; Proforma Onayı</h3>
+          <p class="process-desc">Sipariş tonajınıza özel en avantajlı toptan iskontolarla hazırlanan resmi proforma teklifinizi 2 saat içinde iletelim.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card-top">
+            <span class="process-step-num">03</span>
+            <div class="process-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-title">Kalite Kontrol &amp; Paletli Yükleme</h3>
+          <p class="process-desc">Ürünler parti no, son tüketim tarihi ve ambalaj bütünlüğü denetiminden geçerek shrinkli palet veya konteyner düzeninde hazırlanır.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-card-top">
+            <span class="process-step-num">04</span>
+            <div class="process-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+          </div>
+          <h3 class="process-title">81 İl &amp; Global Limanlara Teslimat</h3>
+          <p class="process-desc">Yurtiçi adrese teslim sevkiyat veya uluslararası ihracatta FOB, CIF ve CFR incoterms teslimatları kesintisiz rota takibiyle tamamlanır.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkımızda Bölümü -->
+  <section id="about" class="why-section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title" data-i18n="about_title">Hakkımızda</h2>
@@ -143,7 +793,7 @@
     </div>
   </section>
 
-  <!-- Catalog Section -->
+  <!-- Ürün Kataloğu Bölümü -->
   <section id="catalog" class="catalog-section">
     <div class="container">
       <div class="section-header">
@@ -156,11 +806,21 @@
           <span class="search-icon">🔍</span>
           <input type="text" id="search-input" class="search-input" placeholder="Ürün adı, marka veya kategori ara..." data-i18n="search_placeholder">
         </div>
-        <div class="filter-pills">
-          <button class="pill-btn active" data-filter="all" data-i18n="filter_all">Tüm Ürünler</button>
-          <button class="pill-btn" data-filter="gida" data-i18n="filter_gida">🌾 Temel Gıda</button>
-          <button class="pill-btn" data-filter="temizlik" data-i18n="filter_temizlik">🧼 Temizlik Malzemeleri</button>
-          <button class="pill-btn" data-filter="toptan" data-i18n="filter_toptan">📦 Toptan Paketi (B2B)</button>
+        
+        <!-- Category Filters with Universal Compatibility (CSS & JS) -->
+        <div class="category-filters filter-pills">
+          <button class="filter-btn pill-btn active" data-category="all" data-filter="all" data-i18n="filter_all">Tüm Ürünler</button>
+          <button class="filter-btn pill-btn" data-category="bakliyat" data-filter="gida" data-i18n="filter_gida">🌾 Bakliyat &amp; Temel Gıda</button>
+          <button class="filter-btn pill-btn" data-category="yag" data-filter="gida">🌻 Sıvı Yağ</button>
+          <button class="filter-btn pill-btn" data-category="un" data-filter="gida">🥖 Un &amp; İrmik</button>
+          <button class="filter-btn pill-btn" data-category="seker" data-filter="gida">🍬 Şeker</button>
+          <button class="filter-btn pill-btn" data-category="cay" data-filter="gida">🍵 Çay</button>
+          <button class="filter-btn pill-btn" data-category="konserve" data-filter="gida">🥫 Salça &amp; Konserve</button>
+          <button class="filter-btn pill-btn" data-category="makarna" data-filter="gida">🍝 Makarna</button>
+          <button class="filter-btn pill-btn" data-category="icecek" data-filter="gida">🥤 İçecek</button>
+          <button class="filter-btn pill-btn" data-category="sarkuteri" data-filter="gida">🧀 Şarküteri</button>
+          <button class="filter-btn pill-btn" data-category="deterjan" data-filter="temizlik" data-i18n="filter_temizlik">🧼 Deterjan &amp; Temizlik</button>
+          <button class="filter-btn pill-btn" data-category="all" data-filter="toptan" data-i18n="filter_toptan">📦 B2B Toptan Palet</button>
         </div>
       </div>
 
@@ -170,7 +830,7 @@
     </div>
   </section>
 
-  <!-- Why Us Section -->
+  <!-- Neden Gıda Global Bölümü -->
   <section id="why-us" class="why-section">
     <div class="container">
       <div class="section-header">
@@ -203,12 +863,12 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- İletişim & B2B Fiyat Teklifi Bölümü -->
   <section id="contact" class="contact-section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title" data-i18n="contact_title">İletişim &amp; Fiyat Teklifi</h2>
-        <p class="section-sub" data-i18n="contact_sub">Toptan veya perakende siparişleriniz için resmi adresimiz veya WhatsApp üzerinden bizimle iletişime geçin.</p>
+        <p class="section-sub" data-i18n="contact_sub">Toptan veya kurumsal siparişleriniz için resmi merkezimiz veya WhatsApp üzerinden bizimle iletişime geçin.</p>
       </div>
 
       <div class="contact-grid">
@@ -217,7 +877,7 @@
             <div class="info-icon">🏢</div>
             <div>
               <h4 style="font-weight: 700;" data-i18n="contact_tax_label">Resmi Şirket Ünvanı &amp; Vergi Dairesi</h4>
-              <p style="color: var(--text-muted); font-size: 0.9rem;">
+              <p style="color: var(--text-light); font-size: 0.9rem;">
                 GLOBAL EXPORT LOGİSTİC DEMİR ÇELİK İNŞAAT GIDA TEKSTİL OTOMOTİV DAN. HIK. İTH. İHR. TİC. VE LTD. ŞTİ. <br>
                 <strong>Vergi Dairesi:</strong> Fatih V.D.
               </p>
@@ -227,7 +887,7 @@
             <div class="info-icon">📍</div>
             <div>
               <h4 style="font-weight: 700;" data-i18n="contact_address_label">Resmi Şirket Adresi</h4>
-              <p style="color: var(--text-muted);" data-i18n="contact_address">
+              <p style="color: var(--text-light);" data-i18n="contact_address">
                 Koca Mustafapaşa Mah. İmrahor İlyasbey Cad. Ballıca Apt. No: 25A Fatih / İstanbul
               </p>
             </div>
@@ -235,37 +895,37 @@
           <div class="info-card">
             <div class="info-icon">📞</div>
             <div>
-              <h4 style="font-weight: 700;" data-i18n="contact_phone_label">Telefon &amp; WhatsApp</h4>
-              <p style="color: var(--text-muted);">
-                <a href="https://wa.me/905320623935" target="_blank" style="color: var(--primary); font-weight: 700;">+90 532 062 39 35</a>
+              <h4 style="font-weight: 700;" data-i18n="contact_phone_label">Telefon &amp; WhatsApp Satış</h4>
+              <p style="color: var(--text-light);">
+                <a href="https://wa.me/905320623935" target="_blank" rel="noopener noreferrer" style="color: var(--secondary); font-weight: 700;">+90 532 062 39 35</a>
               </p>
             </div>
           </div>
         </div>
 
-        <form id="quote-form" class="contact-form">
-          <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem;" data-i18n="btn_quick_view">Hızlı Teklif Formu</h3>
+        <form id="b2b-form" class="contact-form quote-form">
+          <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--navy);" data-i18n="btn_quick_view">Hızlı Teklif Formu</h3>
           <div class="form-group">
-            <label class="form-label" data-i18n="form_name">Adınız Soyadınız / Firma Adı</label>
-            <input type="text" id="form-name" class="form-control" placeholder="Örn: Ahmet Yılmaz / Yılmaz Market" required>
+            <label for="comp-name" class="form-label" data-i18n="form_name">Adınız Soyadınız / Firma Adı</label>
+            <input type="text" id="comp-name" name="comp-name" class="form-control" placeholder="Örn: Ahmet Yılmaz / Yılmaz Market" required>
           </div>
           <div class="form-group">
-            <label class="form-label" data-i18n="form_phone">Telefon Numaranız</label>
-            <input type="tel" id="form-phone" class="form-control" placeholder="Örn: 0532 062 39 35" required>
+            <label for="comp-phone" class="form-label" data-i18n="form_phone">Telefon Numaranız</label>
+            <input type="tel" id="comp-phone" name="comp-phone" class="form-control" placeholder="Örn: 0532 062 39 35" required>
           </div>
           <div class="form-group">
-            <label class="form-label" data-i18n="form_category">İlgilendiğiniz Ürün Grubu</label>
-            <select id="form-category" class="form-control" required>
+            <label for="comp-category" class="form-label" data-i18n="form_category">İlgilendiğiniz Ürün Grubu</label>
+            <select id="comp-category" name="comp-category" class="form-control" required>
               <option value="Temel Gıda Ürünleri" data-i18n="form_opt_gida">Temel Gıda Ürünleri</option>
               <option value="Temizlik Malzemeleri" data-i18n="form_opt_temizlik">Temizlik Malzemeleri</option>
               <option value="Gıda & Temizlik Karma Toptan" data-i18n="form_opt_both">Gıda &amp; Temizlik Karma Toptan</option>
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label" data-i18n="form_message">Sipariş Detayı / Mesajınız</label>
-            <textarea id="form-message" class="form-control" placeholder="Talep ettiğiniz ürün miktarları ve özel istekleriniz..." required></textarea>
+            <label for="comp-message" class="form-label" data-i18n="form_message">Sipariş Detayı / Mesajınız</label>
+            <textarea id="comp-message" name="comp-message" class="form-control" placeholder="Talep ettiğiniz ürün miktarları ve özel istekleriniz..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-whatsapp" style="width: 100%;" data-i18n="form_submit">
+          <button type="submit" class="btn btn-whatsapp" style="width: 100%; justify-content: center;" data-i18n="form_submit">
             WhatsApp Üzerinden Teklif Gönder
           </button>
         </form>
@@ -273,33 +933,36 @@
     </div>
   </section>
 
-  <!-- Product Quick View Modal -->
-  <div id="product-modal" class="modal-overlay">
+  <!-- Ürün Hızlı İnceleme Modal (Product Modal) -->
+  <div id="product-modal" class="modal-overlay product-modal">
     <div class="modal-content">
-      <button id="modal-close-btn" class="modal-close">&times;</button>
+      <button id="modal-close" class="modal-close modal-close-btn" aria-label="Kapat">&times;</button>
       <div class="modal-header-flex">
         <div class="modal-img-container">
-          <img id="modal-img" src="" alt="" class="modal-img">
+          <img id="modal-img" src="" alt="Ürün Görseli" class="modal-img">
         </div>
         <div style="flex: 1; text-align: left;">
-          <span id="modal-code" style="font-size: 0.85rem; font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.2rem 0.6rem; border-radius: 1rem;">KOD: GG-000</span>
-          <h2 id="modal-title" style="font-size: 1.6rem; font-weight: 900; color: var(--navy, #0f172a); margin: 0.5rem 0 0.4rem; line-height: 1.25;">Ürün Adı</h2>
-          <p id="modal-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 0.75rem;">Açıklama</p>
-          <span id="modal-moq" class="moq-tag" style="position: static; display: inline-block; background: #0f172a; color: white; padding: 0.35rem 0.85rem;">Minimum Sipariş</span>
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; flex-wrap: wrap;">
+            <span id="modal-code" style="font-size: 0.85rem; font-weight: 800; color: var(--primary); background: var(--primary-light); padding: 0.2rem 0.6rem; border-radius: 1rem;">KOD: GG-000</span>
+            <span id="modal-category" class="modal-category-tag"></span>
+          </div>
+          <h2 id="modal-title" style="font-size: 1.6rem; font-weight: 900; color: var(--navy); margin: 0.25rem 0 0.5rem; line-height: 1.25;">Ürün Adı</h2>
+          <p id="modal-desc" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin-bottom: 0.85rem;">Açıklama</p>
+          <span id="modal-moq" class="moq-tag" style="position: static; display: inline-block;">Minimum Sipariş</span>
         </div>
       </div>
 
       <div style="background: var(--bg-main); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 1.5rem;">
-        <h4 style="font-weight: 800; color: var(--navy, #0f172a); font-size: 1rem; margin-bottom: 0.75rem;">📦 Ambalaj &amp; Teknik Özellikler</h4>
+        <h4 style="font-weight: 800; color: var(--navy); font-size: 1rem; margin-bottom: 0.75rem;">📦 Ambalaj &amp; Teknik Özellikler</h4>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem;">
-          <p style="font-size: 0.9rem; color: var(--text-main);"><strong>Ambalaj:</strong> <span id="modal-pkg">-</span></p>
+          <p style="font-size: 0.9rem; color: var(--text-main);"><strong>Ambalaj:</strong> <span id="modal-packaging">-</span></p>
           <p style="font-size: 0.9rem; color: var(--text-main);"><strong>Menşei:</strong> <span id="modal-origin">-</span></p>
           <p style="font-size: 0.9rem; color: var(--text-main);"><strong>Raf Ömrü:</strong> <span id="modal-shelf">-</span></p>
           <p style="font-size: 0.9rem; color: var(--text-main);"><strong>Spesifikasyon:</strong> <span id="modal-specs">-</span></p>
         </div>
       </div>
 
-      <h4 style="font-weight: 800; color: var(--navy, #0f172a); font-size: 1rem; margin-bottom: 0.75rem;">📊 Sipariş Birimi Seçiniz (B2B):</h4>
+      <h4 style="font-weight: 800; color: var(--navy); font-size: 1rem; margin-bottom: 0.75rem;">📊 Sipariş Birimi Seçiniz (B2B):</h4>
       <div class="unit-selector">
         <div class="unit-opt" onclick="selectUnitOpt(this, 'Paket')">🛍️ Paket</div>
         <div class="unit-opt active" onclick="selectUnitOpt(this, 'Koli')">📦 Koli Bazında</div>
@@ -307,26 +970,37 @@
         <div class="unit-opt" onclick="selectUnitOpt(this, 'Konteyner')">🚚 Tır / Konteyner (FCL)</div>
       </div>
 
-      <div style="margin-top: 1.5rem;">
-        <button id="modal-wa-btn" class="btn btn-primary" style="width: 100%; justify-content: center;">🛒 Sepete Ekle</button>
+      <div class="modal-actions-grid">
+        <button id="modal-add-cart-btn" class="btn btn-primary" style="flex: 1; justify-content: center;">
+          🛒 Sepete Ekle
+        </button>
+        <a id="modal-whatsapp-btn" href="https://wa.me/905320623935" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="flex: 1; justify-content: center;">
+          💬 WhatsApp ile Danış
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Quote Cart Sidebar -->
-  <div id="cart-sidebar" class="modal-overlay">
-    <div class="modal-content" style="max-width: 450px; right: 0; position: absolute; height: 100vh; transform: translateX(100%); border-radius: 0; max-height: 100vh;">
-      <button id="cart-close-btn" class="modal-close" style="top: 1rem; right: 1rem;">&times;</button>
-      <h3 style="font-size: 1.5rem; font-weight: 900; color: var(--navy, #0f172a); margin-bottom: 1.5rem; display:flex; align-items:center; gap:0.5rem;"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20a1 1 0 100 2 1 1 0 000-2zm7 0a1 1 0 100 2 1 1 0 000-2zm-9.8-3.4c-.2-.7-.4-1.3-.4-1.4L4 4.5 2 4m5.6 11.2h9.7c.6 0 1.1-.4 1.2-1l1.5-6.1c.1-.6-.3-1.1-.9-1.1H6l1.6 8.2z"/></svg> <span data-i18n="cart_title">Teklif Sepeti</span></h3>
+  <!-- Teklif Sepeti Modal / Sidebar -->
+  <div id="cart-modal" class="modal-overlay cart-modal">
+    <div class="modal-content">
+      <button id="cart-close" class="modal-close modal-close-btn" style="top: 1rem; right: 1rem;" aria-label="Sepeti Kapat">&times;</button>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 1.5rem; padding-right: 2.5rem;">
+        <h3 style="font-size: 1.4rem; font-weight: 900; color: var(--navy); display:flex; align-items:center; gap:0.5rem;">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20a1 1 0 100 2 1 1 0 000-2zm7 0a1 1 0 100 2 1 1 0 000-2zm-9.8-3.4c-.2-.7-.4-1.3-.4-1.4L4 4.5 2 4m5.6 11.2h9.7c.6 0 1.1-.4 1.2-1l1.5-6.1c.1-.6-.3-1.1-.9-1.1H6l1.6 8.2z"/></svg> 
+          <span data-i18n="cart_title">Teklif Sepeti</span>
+        </h3>
+        <button id="clear-cart-btn" class="btn btn-outline" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;" title="Sepeti Boşalt">Temizle</button>
+      </div>
       
-      <div id="cart-items" style="display: flex; flex-direction: column; gap: 1rem; overflow-y: auto; max-height: calc(100vh - 200px); padding-right: 0.5rem; margin-bottom:1.5rem;">
-        <!-- Cart items will appear here -->
+      <div id="cart-items" style="display: flex; flex-direction: column; gap: 1rem; overflow-y: auto; max-height: calc(100vh - 220px); padding-right: 0.5rem; margin-bottom: 1.5rem;">
+        <!-- Cart items populated by JavaScript -->
         <div style="color: var(--text-muted); text-align: center; margin-top: 2rem; font-size: 0.9rem;" data-i18n="cart_empty">Sepetiniz boş.</div>
       </div>
       
       <div style="position: absolute; bottom: 1.5rem; left: 1.5rem; right: 1.5rem; background: var(--bg-main); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color);">
-        <button id="cart-checkout-btn" class="btn btn-whatsapp" style="width: 100%; justify-content: center;" disabled>
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: text-bottom; margin-right: 4px;">
+        <button id="send-cart-whatsapp" class="btn btn-whatsapp" style="width: 100%; justify-content: center;" disabled>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
           <span data-i18n="cart_send">Toplu Teklif İste</span> (<span id="cart-count-display">0</span>)
@@ -335,13 +1009,13 @@
     </div>
   </div>
 
-  <!-- Floating Cart Button -->
-  <button id="floating-cart-btn" style="position: fixed; bottom: 2rem; right: 2rem; background: #0f172a; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); border: none; cursor: pointer; z-index: 99; transition: transform 0.3s ease;">
+  <!-- Yüzen Teklif Sepeti Butonu (Floating Cart Button) -->
+  <button id="floating-cart-btn" aria-label="Teklif Sepetini Görüntüle" style="position: fixed; bottom: 2rem; right: 2rem; background: var(--navy); color: #ffffff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-lg); border: none; cursor: pointer; z-index: 99; transition: transform 0.3s ease;">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20a1 1 0 100 2 1 1 0 000-2zm7 0a1 1 0 100 2 1 1 0 000-2zm-9.8-3.4c-.2-.7-.4-1.3-.4-1.4L4 4.5 2 4m5.6 11.2h9.7c.6 0 1.1-.4 1.2-1l1.5-6.1c.1-.6-.3-1.1-.9-1.1H6l1.6 8.2z"/></svg>
-    <span id="floating-cart-count" style="position: absolute; top: 0; right: 0; background: var(--primary); color: white; width: 22px; height: 22px; border-radius: 50%; font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg-main);">0</span>
+    <span id="cart-count" style="position: absolute; top: 0; right: 0; background: var(--primary); color: #ffffff; width: 22px; height: 22px; border-radius: 50%; font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg-main);">0</span>
   </button>
 
-  <!-- Mobile Bottom Nav -->
+  <!-- Mobil Alt Menü Barı (Mobile Bottom Bar) -->
   <div class="mobile-bottom-bar">
     <a href="#home" class="mobile-bar-item active">
       <span class="mobile-bar-icon">🏠</span>
@@ -351,10 +1025,10 @@
       <span class="mobile-bar-icon">📦</span>
       <span>Katalog</span>
     </a>
-    <a href="https://wa.me/905320623935" target="_blank" class="mobile-bar-item" style="color: var(--whatsapp);">
-      <span class="mobile-bar-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="vertical-align: text-bottom; margin-right: 4px;">
-  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-</svg></span>
+    <a href="https://wa.me/905320623935" target="_blank" rel="noopener noreferrer" class="mobile-bar-item" style="color: var(--whatsapp);">
+      <span class="mobile-bar-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg></span>
       <span>WhatsApp</span>
     </a>
     <a href="#contact" class="mobile-bar-item">
@@ -368,17 +1042,18 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="assets/images/logo.png" alt="Gıda Global Logo" style="height: 52px; margin-bottom: 1rem; ">
+          <img src="assets/images/logo.png" alt="Gıda Global Logo" style="height: 52px; margin-bottom: 1rem;">
           <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6;" data-i18n="hero_sub">
-            Gıda Global; temel gıda ve temizlik ürünlerinde güvenilir tedarik adresiniz.
+            Gıda Global; temel gıda, bakliyat ve endüstriyel temizlik ürünlerinde 81 il ve 40+ ülkeye güvenilir B2B toptan tedarik ve küresel ihracat ortağınız.
           </p>
         </div>
         <div>
           <h4 class="footer-title" data-i18n="footer_quick_links">Hızlı Bağlantılar</h4>
           <ul class="footer-links">
             <li><a href="#home" data-i18n="nav_home">Ana Sayfa</a></li>
-            <li><a href="#about" class="nav-link" data-i18n="nav_about">Hakkımızda</a></li>
-          <li><a href="#catalog" data-i18n="nav_catalog">Ürün Kataloğu</a></li>
+            <li><a href="#about" data-i18n="nav_about">Hakkımızda</a></li>
+            <li><a href="#process" data-i18n="nav_process">Tedarik Süreci</a></li>
+            <li><a href="#catalog" data-i18n="nav_catalog">Ürün Kataloğu</a></li>
             <li><a href="#why-us" data-i18n="nav_b2b">Toptan Satış</a></li>
             <li><a href="#contact" data-i18n="nav_contact">İletişim</a></li>
           </ul>
@@ -398,8 +1073,9 @@
     </div>
   </footer>
 
-  <script src="assets/js/i18n.js?v=5.6"></script>
-  <script src="assets/js/products.js?v=5.6"></script>
-  <script src="assets/js/main.js?v=5.6"></script>
+  <!-- External Application Scripts -->
+  <script src="assets/js/i18n.js?v=6.0"></script>
+  <script src="assets/js/products.js?v=6.0"></script>
+  <script src="assets/js/main.js?v=6.0"></script>
 </body>
 </html>
