@@ -521,6 +521,80 @@ button, input, select, textarea {
   box-shadow: 0 4px 12px var(--primary-glow);
 }
 
+/* Language Selector Pill Button (Windows/Mac/Mobile Cross-Platform Ultra-Premium) */
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--navy);
+  transition: all var(--transition-fast);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.lang-toggle-btn:hover {
+  background: var(--bg-secondary);
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.lang-globe-icon {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--primary);
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+[data-theme="dark"] .lang-globe-icon {
+  color: #38bdf8;
+}
+
+.lang-toggle-btn:hover .lang-globe-icon {
+  transform: rotate(25deg);
+}
+
+.lang-pill-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.lang-choice {
+  transition: color var(--transition-fast), font-weight var(--transition-fast), opacity var(--transition-fast);
+  opacity: 0.45;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lang-choice.active {
+  opacity: 1;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+[data-theme="dark"] .lang-choice.active {
+  color: #38bdf8;
+}
+
+.lang-divider {
+  opacity: 0.35;
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  user-select: none;
+}
+
 /* --------------------------------------------------------------------------
    6. HERO SECTION
    -------------------------------------------------------------------------- */

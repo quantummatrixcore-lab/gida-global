@@ -37,7 +37,7 @@ const productsData = [
     origin_en: "Aydin / Konya, Turkey",
     specs_tr: "Protein: Min %11.5 | Tip 550 / 650 | Kül: Max %0.65",
     specs_en: "Protein: Min 11.5% | Type 550 / 650 | Ash: Max 0.65%",
-    image: "assets/images/products/product_1.jpg?v=5.6"
+    image: "assets/images/products/product_1.jpg?v=6.1"
   },
   {
     id: 2,
@@ -60,7 +60,7 @@ const productsData = [
     origin_en: "Thrace Region, Turkey",
     specs_tr: "Serbest Yağ Asitliği: Max %0.1 | Trans Yağ İçermez",
     specs_en: "Free Fatty Acidity: Max 0.1% | Zero Trans Fat",
-    image: "assets/images/products/product_2.jpg?v=5.6"
+    image: "assets/images/products/product_2.jpg?v=6.1"
   },
   {
     id: 3,
@@ -83,7 +83,7 @@ const productsData = [
     origin_en: "Central Anatolia, Turkey",
     specs_tr: "Polarizasyon: Min %99.8 | Renk: ICUMSA 45",
     specs_en: "Polarization: Min 99.8% | Color: ICUMSA 45 Max",
-    image: "assets/images/products/product_3.jpg?v=5.6"
+    image: "assets/images/products/product_3.jpg?v=6.1"
   },
   {
     id: 4,
@@ -106,7 +106,7 @@ const productsData = [
     origin_en: "Southeastern Anatolia, Turkey",
     specs_tr: "Kalibre: 8-9 mm | Rutubet: Max %12 | Yabancı Madde: %0.05",
     specs_en: "Caliber: 8-9 mm | Moisture: Max 12% | Foreign Matter: 0.05%",
-    image: "assets/images/products/product_4.jpg?v=5.6"
+    image: "assets/images/products/product_4.jpg?v=6.1"
   },
   {
     id: 5,
@@ -129,7 +129,7 @@ const productsData = [
     origin_en: "Gonen / Balikesir, Turkey",
     specs_tr: "Kırık Tane: Max %2 | Tane Boyu: Min 6.8 mm",
     specs_en: "Broken Grain: Max 2% | Grain Length: Min 6.8 mm",
-    image: "assets/images/products/product_5.jpg?v=5.6"
+    image: "assets/images/products/product_5.jpg?v=6.1"
   },
   {
     id: 6,
@@ -152,7 +152,7 @@ const productsData = [
     origin_en: "Bursa / Karacabey, Turkey",
     specs_tr: "Brix: 28-30% | Tuz: Max %2 | Katkısız",
     specs_en: "Brix: 28-30% | Salt: Max 2% | All-Natural",
-    image: "assets/images/products/product_6.jpg?v=5.6"
+    image: "assets/images/products/product_6.jpg?v=6.1"
   },
   {
     id: 7,
@@ -175,7 +175,7 @@ const productsData = [
     origin_en: "Turkey (Unilever License)",
     specs_tr: "Aktif Madde: %15+ | Renkliler ve Beyazlar İçin Ortak",
     specs_en: "Active Matter: 15%+ | Color & White Dual Action",
-    image: "assets/images/products/product_7.jpg?v=5.6"
+    image: "assets/images/products/product_7.jpg?v=6.1"
   },
   {
     id: 8,
@@ -198,7 +198,7 @@ const productsData = [
     origin_en: "Turkey (P&G License)",
     specs_tr: "pH: 8.5-9.2 | Yüksek Yüzey Aktif Yoğunluğu",
     specs_en: "pH: 8.5-9.2 | High Surfactant Concentration",
-    image: "assets/images/products/product_8.jpg?v=5.6"
+    image: "assets/images/products/product_8.jpg?v=6.1"
   },
   {
     id: 9,
@@ -221,7 +221,7 @@ const productsData = [
     origin_en: "Turkey (Unilever License)",
     specs_tr: "Aktif Klor: Min %4.5 | Kıvamlı Jel Formül",
     specs_en: "Active Chlorine: Min 4.5% | Viscous Clinging Gel",
-    image: "assets/images/products/product_9.jpg?v=5.6"
+    image: "assets/images/products/product_9.jpg?v=6.1"
   },
   {
     id: 10,
@@ -244,7 +244,7 @@ const productsData = [
     origin_en: "Istanbul, Turkey (Eczacibasi)",
     specs_tr: "pH: 5.5 Cilt Uyumlu | Dermatolojik Test Onaylı",
     specs_en: "Skin-Friendly pH 5.5 | Dermatologically Tested",
-    image: "assets/images/products/product_10.jpg?v=5.6"
+    image: "assets/images/products/product_10.jpg?v=6.1"
   },
   {
     id: 11,
@@ -267,7 +267,7 @@ const productsData = [
     origin_en: "Turkey (Eczacibasi Consumer Products)",
     specs_tr: "Çift Katlı | %100 Birinci Sınıf Beyaz Selüloz | 21x23 cm",
     specs_en: "2-Ply | 100% Virgin White Cellulose | 21x23 cm",
-    image: "assets/images/products/product_11.jpg?v=5.6"
+    image: "assets/images/products/product_11.jpg?v=6.1"
   },
   {
     id: 12,
@@ -290,7 +290,7 @@ const productsData = [
     origin_en: "Adana, Turkey (Beyaz Kagit)",
     specs_tr: "Anında Etkili Yağ Çözücü | Kalıntı Bırakmaz",
     specs_en: "Instant Grease Dissolver | Zero Residue Formula",
-    image: "assets/images/products/product_12.jpg?v=5.6"
+    image: "assets/images/products/product_12.jpg?v=6.1"
   },
   {
     id: 13,
@@ -313,7 +313,7 @@ const productsData = [
     origin_en: "Rize, Turkey (CAYKUR)",
     specs_tr: "1. Sınıf Doğu Karadeniz Hasatı | Nem: Max %7",
     specs_en: "Grade 1 Black Sea Harvest | Moisture: Max 7%",
-    image: "assets/images/products/product_13.jpg?v=5.6"
+    image: "assets/images/products/product_13.jpg?v=6.1"
   },
   {
     id: 14,
@@ -336,7 +336,7 @@ const productsData = [
     origin_en: "Central Anatolia, Turkey",
     specs_tr: "Kutu İçi: 360 Küp | %100 Saf Şeker Pancarı",
     specs_en: "360 Cubes Per Box | 100% Pure Sugar Beet",
-    image: "assets/images/products/product_14.jpg?v=5.6"
+    image: "assets/images/products/product_14.jpg?v=6.1"
   },
   {
     id: 15,
@@ -359,7 +359,7 @@ const productsData = [
     origin_en: "Ankara, Turkey",
     specs_tr: "Protein: Min %12 | %100 Durum Buğdayı İrmiği",
     specs_en: "Protein: Min 12% | 100% Durum Wheat Semolina",
-    image: "assets/images/products/product_15.jpg?v=5.6"
+    image: "assets/images/products/product_15.jpg?v=6.1"
   },
   {
     id: 16,
@@ -382,7 +382,7 @@ const productsData = [
     origin_en: "Ayvalik / Aegean Region, Turkey",
     specs_tr: "Serbest Yağ Asitliği: Maks %0.8 | Soğuk Sıkım",
     specs_en: "Free Fatty Acidity: Max 0.8% | Cold Pressed",
-    image: "assets/images/products/product_16.jpg?v=5.6"
+    image: "assets/images/products/product_16.jpg?v=6.1"
   },
   {
     id: 17,
@@ -405,7 +405,7 @@ const productsData = [
     origin_en: "Izmir, Turkey",
     specs_tr: "Saflık: Min %99.5 NaCl | Nem: Max %0.5 | İyot: 25-40 mg/kg",
     specs_en: "Purity: Min 99.5% NaCl | Moisture: Max 0.5% | Iodine: 25-40 ppm",
-    image: "assets/images/products/product_17.jpg?v=5.6"
+    image: "assets/images/products/product_17.jpg?v=6.1"
   }
 ];
 
@@ -718,13 +718,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- F. Dil ve i18n Mantığı (SVG Korumalı) ---
+  // --- F. Dil ve i18n Mantığı (SVG Korumalı & Ultra-Premium Globe Pill) ---
+  function updateLangButtonUI(lang) {
+    if (!langBtn) return;
+
+    let track = langBtn.querySelector('.lang-pill-track');
+    if (!track) {
+      langBtn.innerHTML = `
+        <svg class="lang-globe-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="2" y1="12" x2="22" y2="12"></line>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+        </svg>
+        <span class="lang-pill-track">
+          <span class="lang-choice lang-choice-tr">TR</span>
+          <span class="lang-divider">|</span>
+          <span class="lang-choice lang-choice-en">EN</span>
+        </span>
+      `;
+    }
+
+    const trOpt = langBtn.querySelector('.lang-choice-tr');
+    const enOpt = langBtn.querySelector('.lang-choice-en');
+
+    if (lang === 'tr') {
+      if (trOpt) trOpt.classList.add('active');
+      if (enOpt) enOpt.classList.remove('active');
+      langBtn.setAttribute('title', 'Switch to English');
+      langBtn.setAttribute('aria-label', 'Switch to English');
+    } else {
+      if (enOpt) enOpt.classList.add('active');
+      if (trOpt) trOpt.classList.remove('active');
+      langBtn.setAttribute('title', 'Türkçe diline geç');
+      langBtn.setAttribute('aria-label', 'Türkçe diline geç');
+    }
+  }
+
   function applyTranslations() {
     document.documentElement.lang = currentLang;
 
-    if (langBtn) {
-      langBtn.textContent = currentLang === 'tr' ? 'EN 🇬🇧' : 'TR 🇹🇷';
-    }
+    updateLangButtonUI(currentLang);
 
     // Sözlük birleştirme
     const dict = Object.assign(
@@ -764,8 +797,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (langBtn) {
-    langBtn.addEventListener('click', () => {
-      currentLang = currentLang === 'tr' ? 'en' : 'tr';
+    langBtn.addEventListener('click', (e) => {
+      const choice = e.target.closest('.lang-choice');
+      if (choice) {
+        if (choice.classList.contains('lang-choice-tr')) {
+          if (currentLang === 'tr') return;
+          currentLang = 'tr';
+        } else if (choice.classList.contains('lang-choice-en')) {
+          if (currentLang === 'en') return;
+          currentLang = 'en';
+        }
+      } else {
+        currentLang = currentLang === 'tr' ? 'en' : 'tr';
+      }
       localStorage.setItem('site_lang', currentLang);
       applyTranslations();
       applyTheme(currentTheme); // Başlık/tooltip dillerini tazele
